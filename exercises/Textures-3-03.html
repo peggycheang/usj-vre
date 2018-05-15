@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Textures - Photosphere</title>
+   <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+      <a-assets>
+        <img id="photo"  crossorigin="anonymous" src="https://cdn.glitch.com/796b8d45-da95-4858-aaa8-17a7e93f24f1%2FR0010063.JPG?1525434859245">
+         <img id="treeBark" src="https://cdn.glitch.com/796b8d45-da95-4858-aaa8-17a7e93f24f1%2Foak_tree_bark.jpg?1525422944546">
+      </a-assets>
+      
+
+      <a-cylinder src="#treeBark" height="3" radius="0.5" position="-0.8 0.4 -2.5" scale="0.25 0.25 0.25" rotation="0 30 0"></a-cylinder>
+      <a-sky src="#photo" rotation="0 35 0"></a-sky>
+
+      <a-camera wasd-controls-enabled="false"></a-camera>
+    </a-scene>
+  </body>
+</html>

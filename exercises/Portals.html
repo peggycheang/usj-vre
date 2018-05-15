@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Portals</title>
+      <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+      <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+     
+   </head>
+   <body>
+      <a-scene background="color:lightblue">
+         <a-assets>
+            <img id="scene" src="https://cdn.glitch.com/796b8d45-da95-4858-aaa8-17a7e93f24f1%2Fscreenshot-environments%20-%20dressing-1525855332896.png?1525856327860">
+            <img id="horse" src="https://cdn.glitch.com/796b8d45-da95-4858-aaa8-17a7e93f24f1%2Fscreenshot-magica-voxel-1525855931416.png?1525855958346">
+         </a-assets>
+        
+        <a-entity environment="preset: goldmine; dressingAmount: 20"></a-entity>
+         <a-link position="-2 2 -2" link="visualAspectEnabled:false"  href="/exercises/Environments-4-01.html" title="Go to fountain exercise">
+            <a-sphere src="#scene"></a-sphere>
+         </a-link>
+         <a-cylinder position="-2 0.5 -2" radius="0.25"></a-cylinder>
+         <a-link position="2 2 -2"  image="#horse" href="/exercises/Magica-voxel-6-01.html" title="Go to Magica-voxel exercise"></a-link>
+         <a-cylinder position="2 0.5 -2" radius="0.25"></a-cylinder>
+         <a-camera position="0 1.7 5">
+            <a-cursor color="red"></a-cursor>
+         </a-camera>
+      </a-scene>
+   </body>
+</html>

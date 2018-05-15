@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Basics - Position</title>
+      <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+   </head>
+   <body>
+      <a-scene>
+        <a-sky color="#234561"></a-sky>
+        <a-assets>
+           <img id="xxx" src="https://cdn.glitch.com/80978ab7-9db6-45ae-bc43-4fab16bdbb6e%2Fx.png?1523893000643">
+          <img id="ooo" src="https://cdn.glitch.com/80978ab7-9db6-45ae-bc43-4fab16bdbb6e%2Fo.png?1523893003465">
+        </a-assets>  
+          
+         <a-box position="-1 2 -4" width="1" height="1" depth="1" repeat="3 3" src="#xxx"></a-box>
+         <a-box position="1 2 -4" width="1" height="1" depth="1" repeat="3 3" src="#ooo"></a-box>
+
+        
+      </a-scene>
+   </body>
+</html>

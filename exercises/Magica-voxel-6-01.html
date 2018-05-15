@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Magica-voxel</title>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.2/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+
+  </head>
+  <body>
+    <a-scene>
+         <a-assets>
+          <a-asset-item id="horse-obj" crossorigin="anonymous"  src="https://raw.githubusercontent.com/peggycheang/usj-vre/master/horse001/horse2.obj"></a-asset-item>
+          <a-asset-item id="horse-mtl" crossorigin="anonymous" src="https://raw.githubusercontent.com/peggycheang/usj-vre/master/horse001/horse2.mtl"></a-asset-item>
+                  
+         </a-assets>
+      
+      <a-entity environment="preset: forest; 
+                             dressing: trees; 
+                             dressingAmount: 120; 
+                             dressingScale: 6; 
+                             dressingColor: green; 
+                             skyType: gradient; 
+                             skyColor: blue; 
+                             ground: hills;
+                             groundColor: #514b30;
+                             groundColor2: #72683f;
+                             groundTexture: walkernoise; 
+                             groundYScale: 40;
+                             fog: 0"></a-entity> 
+      
+      <a-entity position="0 2.25 -15" particle-system="preset: rain; color:blue, white; size:1; maxAge: 1;"></a-entity>
+      <a-entity light="type: ambient; intensity: 0.3;"></a-entity>
+      <a-obj-model src="#horse-obj" mtl="#horse-mtl" scale="0.2 0.2 0.2" rotation="0 60 0" position="-1.5 0 0"></a-obj-model>
+      <a-camera position="0 1.6 9"></a-camera>
+     <!-- dressing: none, cubes, pyramids, cylinders, towers, mushrooms, trees, apparatus, torii 
+-->
+    </a-scene>
+  </body>
+</html>
+
+
+
+       

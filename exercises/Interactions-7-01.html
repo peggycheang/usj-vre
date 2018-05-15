@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Interaction </title>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+      <a-assets>
+
+      </a-assets>
+      
+      <a-box position="0 0.5 -3" width="2" depth="1.5" color="brown"  
+             ></a-box>
+      <a-text position="-1.2 1.2 -2.5" value="OFF" align="center" color="black" side="double"></a-text>
+      
+      <a-box position="0.9 1.05 -2.3" height="0.1" width="0.1" depth="0.1" color="green"  
+             event-set__mousedown="_target:#spotlight; intensity: 1"
+             ></a-box>
+      <a-text position="1.2 1.2 -2.5" value="ON" align="center" color="black" side="double"></a-text>
+      
+      <a-box position="-0.9 1.05 -2.3" height="0.1" width="0.1" depth="0.1" color="red"
+             event-set__mousedown="_target:#spotlight; intensity: 0"                   
+             ></a-box>
+
+      <a-cone position="0.694 1.6 -3.5" rotation="-20 0 -20" height="0.3" radius-bottom="0.2" color="yellow">
+        <a-light id="spotlight" angle="40" type="spot" intensity="1" rotation="-100 0 -10"></a-light>
+      </a-cone>
+
+      <a-light type="ambient" intensity="0.7"></a-light>
+
+      <a-camera>
+        <a-cursor></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>

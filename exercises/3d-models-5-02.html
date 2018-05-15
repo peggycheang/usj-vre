@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>3D Models - glTF</title>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.2/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+
+  </head>
+  <body>
+    <a-scene shadow="type: pcfsoft">
+      
+         <a-assets>
+           <a-asset-item id="animal" src="https://raw.githubusercontent.com/peggycheang/usj-vre/master/animal/scene.gltf"></a-asset-item>
+          <img id="treeBark" src="https://cdn.glitch.com/796b8d45-da95-4858-aaa8-17a7e93f24f1%2Foak_tree_bark.jpg?1525422944546">
+          
+         </a-assets>
+      
+      <a-cylinder src="#treeBark" position="0 0 -4" height="3" radius=".35" rotation="0 45 0" ></a-cylinder>
+      
+      <a-gltf-model position="0 1.5 -4" scale="0.3 0.3 0.3" rotation="0 0 0" src="#animal"></a-gltf-model>
+      
+      
+      <a-entity environment="preset: forest; dressing: trees; dressingAmount: 120; dressingScale: 6; dressingColor: green; skyType: gradient; skyColor: red; ground: hills; groundYScale: 40; fog: 0"></a-entity> 
+      <a-entity position="0 2.25 -15" particle-system="preset: rain; color:blue,white; size:1; maxAge: 1;"></a-entity>
+      <a-entity light="type: ambient; intensity: 0.15;"></a-entity>
+    
+
+
+     <!-- dressing: none, cubes, pyramids, cylinders, towers, mushrooms, trees, apparatus, torii 
+-->
+    </a-scene>
+  </body>
+</html>

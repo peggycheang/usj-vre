@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Animations-8-01</title>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene background="color:#0077ff">
+
+      <a-box position="0 0.25 -3" width="5" depth="5" height="0.25" color="#ff5100"
+             animation="property: rotation; to: 0 360 0; dur: 5000; loop: true; easing:linear">
+      </a-box>
+      <a-box position="0 0.5 -3" width="4" depth="4" height="0.25" color="#ff7200"
+             animation="property: rotation; to: 0 360 0; dur: 4000; loop: true; easing:linear">
+      </a-box>
+      <a-box position="0 0.75 -3" width="3" depth="3" height="0.25" color="#ff9a00"
+             animation="property: rotation; to: 0 360 0; dur: 3000; loop: true; easing:linear">
+      </a-box>
+      <a-box position="0 1 -3" width="2" depth="2" height="0.25" color="#ffc200"
+             animation="property: rotation; to: 0 360 0; dur: 2000; loop: true; easing:linear">
+      </a-box>
+      <a-box position="0 1.25 -3" width="1" depth="1" height="0.25" color="#ffd900"
+             animation="property: rotation; to: 0 360 0; dur: 1000; loop: true; easing:linear">
+      </a-box>
+      <a-box position="0 1.5 -3" width="0.5" depth="0.5" height="0.25" color="#ffff00"
+             animation="property: rotation; to: 0 360 0; dur: 500; loop: true; easing:linear">
+      </a-box>
+      
+      
+    </a-scene>
+  </body>
+</html>

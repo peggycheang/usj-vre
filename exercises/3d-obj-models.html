@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>3D Models - OBJ</title>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.2/dist/aframe-extras.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+          <a-asset-item id="tree-obj" crossorigin="anonymous"  src="https://raw.githubusercontent.com/peggycheang/usj-vre/master/tree/Lowpoly_tree_sample.obj"></a-asset-item>
+
+          <a-asset-item id="tree-mtl" crossorigin="anonymous" src="https://raw.githubusercontent.com/peggycheang/usj-vre/master/tree/Lowpoly_tree_sample.mtl"></a-asset-item>
+        </a-assets>
+
+       <a-obj-model src="#tree-obj" mtl="#tree-mtl" scale="0.4 0.4 0.4" rotation="0 0 0" position="0 -2 -8"></a-obj-model>
+
+
+    </a-scene>
+</body>
+
+</html>

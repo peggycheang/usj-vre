@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Interaction </title>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+       <img id="mirror" src="https://cdn.glitch.com/796b8d45-da95-4858-aaa8-17a7e93f24f1%2F12145-bump.jpg?1525785179596">
+       <img id="photo" src="https://cdn.glitch.com/796b8d45-da95-4858-aaa8-17a7e93f24f1%2F32170076_10155982019669823_3330515738094993408_n.jpg?1525785562256">
+      </a-assets>     
+      
+      <a-plane src="#mirror" repeat="1 1" position="-1.5 2 -7" width="2" height="4"
+               event-set__mouseenter="src: #photo"
+               event-set__mouseleave="src: #mirror"
+               
+               ></a-plane>
+      
+      <a-sky color="black" ></a-sky>
+      
+      
+     
+      <a-camera>
+        <a-cursor color="red"></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>3D Models - glTF</title>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.2/dist/aframe-extras.min.js"></script>
+</head>
+
+<body>
+    <a-scene >
+        <a-assets>
+            <a-asset-item id="car" src="https://raw.githubusercontent.com/peggycheang/usj-vre/master/pony_cartoon/scene.gltf"></a-asset-item>
+
+        </a-assets>
+
+        <a-gltf-model position="0 -2 -20" scale="0.03 0.03 0.03" rotation="0 30 0" src="#car"></a-gltf-model>
+
+        <a-sky color="#222222"></a-sky>
+        <a-light type="ambient" intensity="5" color="#ffffff"></a-light>
+      <a-light type="point" intensity="5" penumbra="0.5" distance="20" decay="2" color="#ffffff"></a-light>
+
+    </a-scene>
+</body>
+
+</html>
